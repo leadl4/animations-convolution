@@ -28,6 +28,21 @@
             background: rgba(255, 255, 255, 0.1);
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
         }
+        .formula-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .formula-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .formula-image {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         h1 {
             text-align: center;
             font-size: 26px;
@@ -60,15 +75,25 @@
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
             transition: transform 0.3s ease-in-out;
         }
-        img:hover {
-            transform: scale(1.05);
-        }
         .formula {
             text-align: center;
             font-size: 1.1em;
             font-style: italic;
             margin: 20px 0;
             color: #DBE2FF;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 10px auto;
+            border: 2px solid white;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.05);
         }
         .animation {
             width: 65%; /* Taille ajustée de l'animation */
@@ -79,42 +104,133 @@
 <body>
     <h1>Animations de convolution</h1>
     <div class="container">
-        <div class="section">
-            <h2>Fonctions 1</h2>
-            <h3>\(x_1(t)\)</h3>
-            <p class="formula">\[x_1(t) = \begin{cases} 1, & 0 < t < 1 \\ 0, & \text{sinon} \end{cases}\]</p>
-            <h3>h₁(t)</h3>
-            <p class="formula">\[h_1(t) = \begin{cases} 0.5, & 0 < t < 1 \\ 0, & \text{sinon} \end{cases}\]</p>
+        <div class="formula-container">
+            <div class="formula-text">
+                <h2>Fonctions 1</h2>
+                <h3>\(x_1(t)\)</h3>
+                <p class="formula">\[x_1(t) = \begin{cases} 1, & 0 < t < 1 \\ 0, & \text{sinon} \end{cases}\]</p>
+            </div>
+            <div class="formula-image">
+                <img src="x1.png" alt="Graphique de /(x_1(t)/)">
+            </div>
+        </div>
+        <div class="formula-container">
+            <div class="formula-text">
+                <h3>\(h_1\)(t)</h3>
+                <p class="formula">\[h_1(t) = \begin{cases} 0.5, & 0 < t < 1 \\ 0, & \text{sinon} \end{cases}\]</p>
+            </div>
+            <div class="formula-image">
+                <img src="h1.png" alt="Graphique de /(h_1(t)/)">
+            </div>
         </div>
         <div class="section">
-            <h2>Animation de la convolution de \( x_1 \) et \( h_1 \)</h2>
+            <h2>Animation de la convolution de \(x_1\) et \(h_1\)</h2>
+            <img src="animation1.gif" alt="Animation de convolution" class="animation">
+        </div>
+    </div>
+        <div class="section">
+            <h2>Animation de la convolution de \(x_1\) et \(h_1\)</h2>
             <img src="animation1.gif" alt="Animation de convolution" class="animation">
         </div>
     </div>
     <div class="container">
-        <div class="section">
-            <h2>Fonctions 2</h2>
-            <h3>\(x_2\)(t)</h3>
-            <p class="formula">\[x_2(t) = \begin{cases} 1, & 0 < t < 1 \\ 0, & \text{sinon} \end{cases}\]</p>
-            <h3>\(h_2\)(t)</h3>
-            <p class="formula">\[h_2(t) = \begin{cases} x, & 0 < t < 0.5 \\ 0, & \text{sinon} \end{cases}\]</p>
+        <div class="formula-container">
+            <div class="formula-text">
+                <h2>Fonctions 2</h2>
+                <h3>\(x_2(t)\)</h3>
+                <p class="formula">\[x_2(t) = \begin{cases} 1, & 0 < t < 1 \\ 0, & \text{sinon} \end{cases}\]</p>
+            </div>
+            <div class="formula-image">
+                <img src="x2.png" alt="Graphique de /(x_2(t)/)">
+            </div>
+        </div>
+        <div class="formula-container">
+            <div class="formula-text">
+                <h3>\(h_2(t)\)</h3>
+                <p class="formula">\[h_2(t) = \begin{cases} x, & 0 < t < 0.5 \\ 0, & \text{sinon} \end{cases}\]</p>
+            </div>
+            <div class="formula-image">
+                <img src="h2.png" alt="Graphique de /(h_2(t)/)">
+            </div>
         </div>
         <div class="section">
             <h2>Animation de la convolution de \(x_2\) et \(h_2\)</h2>
             <img src="animation2.gif" alt="Animation de convolution" class="animation">
         </div>
     </div>
-     <div class="container">
-        <div class="section">
-            <h2>Fonctions 3</h2>
-            <h3>\(x_3(t)\)</h3>
-            <p class="formula">\[x_3(t) = \begin{cases} 1, & t > 0 \\ 0, & \text{sinon} \end{cases}\]</p>
-            <h3>h₁(t)</h3>
-            <p class="formula">\[h_3(t) = \begin{cases} e^{-t}, & t > 0 \\ 0, & \text{sinon} \end{cases}\]</p>
+    <div class="container">
+        <div class="formula-container">
+            <div class="formula-text">
+                <h2>Fonctions 3</h2>
+                <h3>\(x_3(t)\)</h3>
+                <p class="formula">\[x_3(t) = \begin{cases} 1, & t > 0 \\ 0, & \text{sinon} \end{cases}\]</p>
+            </div>
+            <div class="formula-image">
+                <img src="x3.png" alt="Graphique de /(x_3(t)/)">
+            </div>
+        </div>
+        <div class="formula-container">
+            <div class="formula-text">
+                <h3>\(h_3(t)\)</h3>
+                <p class="formula">\[h_3(t) = \begin{cases} e^{-t}, & t > 0 \\ 0, & \text{sinon} \end{cases}\]</p>
+            </div>
+            <div class="formula-image">
+                <img src="h3.png" alt="Graphique de /(h_3(t)/)">
+            </div>
         </div>
         <div class="section">
             <h2>Animation de la convolution de \(x_3\) et \(h_3\)</h2>
             <img src="animation3.gif" alt="Animation de convolution" class="animation">
+        </div>
+    </div>
+    <div class="container">
+        <div class="formula-container">
+            <div class="formula-text">
+                <h2>Fonctions 4</h2>
+                <h3>\(x_4(t)\)</h3>
+                <p class="formula">\[x_4(t) = \begin{cases} \frac{1}{10} e^{\frac{-(t-20)^2}{20}} + \frac{4}{10} e^{\frac{-(t-50)^2}{20}}, & t > 0 \\ 0, & \text{sinon} \end{cases}\]</p>
+            </div>
+            <div class="formula-image">
+                <img src="x4.png" alt="Graphique de /(x_4(t)/)">
+            </div>
+        </div>
+        <div class="formula-container">
+            <div class="formula-text">
+                <h3>\(h_4(t)\)</h3>
+                <p class="formula">\[h_4(t) = \begin{cases} sin(\frac{2 \pi t}{10}) e^{-0.06t}, & t > 0 \\ 0, & \text{sinon} \end{cases}\]</p>
+            </div>
+            <div class="formula-image">
+                <img src="h4.png" alt="Graphique de /(h_4(t)/)">
+            </div>
+        </div>
+        <div class="section">
+            <h2>Animation de la convolution de \(x_4\) et \(h_4\)</h2>
+            <img src="animation4.gif" alt="Animation de convolution" class="animation">
+        </div>
+    </div>
+    <div class="container">
+        <div class="formula-container">
+            <div class="formula-text">
+                <h2>Fonctions 5</h2>
+                <h3>\(x_5(t)\)</h3>
+                <p class="formula">\[x_5(t) = \begin{cases} 0.2, & t = 20 \\ 1, & t = 25 \\ 0.5, & t = 50 \\ 0.3, & t = 70 \\ 0, & \text{sinon} \end{cases}\]</p>
+            </div>
+            <div class="formula-image">
+                <img src="x5.png" alt="Graphique de /(x_5(t)/)">
+            </div>
+        </div>
+        <div class="formula-container">
+            <div class="formula-text">
+                <h3>\(h_5(t)\)</h3>
+                <p class="formula">\[h_5(t) = \begin{cases} e^{\frac{-t^2}{10}}, & t > 0 \\ 0, & \text{sinon} \end{cases}\]</p>
+            </div>
+            <div class="formula-image">
+                <img src="h5.png" alt="Graphique de /(h_5(t)/)">
+            </div>
+        </div>
+        <div class="section">
+            <h2>Animation de la convolution de \(x_5\) et \(h_5\)</h2>
+            <img src="animation5.gif" alt="Animation de convolution" class="animation">
         </div>
     </div>
 </body>
