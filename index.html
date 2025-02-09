@@ -105,9 +105,9 @@
 <body>
     <h1>Animations de convolution</h1>
     <div class="container">
+        <h2>Exemple 1</h2>
         <div class="formula-container">
             <div class="formula-text">
-                <h2>Fonctions 1</h2>
                 <h3>\(x_1(t)\)</h3>
                 <p class="formula">\[x_1(t) = \begin{cases} 1, & 0 < t < 1 \\ 0, & \text{sinon} \end{cases}\]</p>
             </div>
@@ -130,9 +130,9 @@
         </div>
     </div>
     <div class="container">
+        <h2>Exemple 2</h2>
         <div class="formula-container">
             <div class="formula-text">
-                <h2>Fonctions 2</h2>
                 <h3>\(x_2(t)\)</h3>
                 <p class="formula">\[x_2(t) = \begin{cases} 1, & 0 < t < 1 \\ 0, & \text{sinon} \end{cases}\]</p>
             </div>
@@ -155,9 +155,9 @@
         </div>
     </div>
     <div class="container">
+        <h2>Exemple 3</h2>
         <div class="formula-container">
             <div class="formula-text">
-                <h2>Fonctions 3</h2>
                 <h3>\(x_3(t)\)</h3>
                 <p class="formula">\[x_3(t) = \begin{cases} 1, & t > 0 \\ 0, & \text{sinon} \end{cases}\]</p>
             </div>
@@ -180,9 +180,9 @@
         </div>
     </div>
     <div class="container">
+        <h2>Exemple 4</h2>
         <div class="formula-container">
             <div class="formula-text">
-                <h2>Fonctions 4</h2>
                 <h3>\(x_4(t)\)</h3>
                 <p class="formula">\[x_4(t) = \begin{cases} \frac{1}{10} e^{\frac{-(t-20)^2}{20}} + \frac{4}{10} e^{\frac{-(t-50)^2}{20}}, & t > 0 \\ 0, & \text{sinon} \end{cases}\]</p>
             </div>
@@ -205,9 +205,9 @@
         </div>
     </div>
     <div class="container">
+        <h2>Exemple 5</h2>
         <div class="formula-container">
             <div class="formula-text">
-                <h2>Fonctions 5</h2>
                 <h3>\(x_5(t)\)</h3>
                 <p class="formula">\[x_5(t) = \begin{cases} 0.2, & t = 20 \\ 1, & t = 25 \\ 0.5, & t = 50 \\ 0.3, & t = 70 \\ 0, & \text{sinon} \end{cases}\]</p>
             </div>
@@ -229,5 +229,34 @@
             <img src="animation5.gif" alt="Animation de convolution" class="animation">
         </div>
     </div>
+    <div class="container">
+        <h2>Exemple 6</h2>
+        <div class="formula-container">
+             <div class="formula-text">
+                <h3>\(x_6(t)\)</h3>
+            </div>
+            <div class="formula-image">
+                <img src="x6.png" alt="Graphique de /(x_6(t)/)">
+            </div>
+        </div>
+        <div class="formula-container">
+             <div class="formula-text">
+                <h3>\(h_6(t)\)</h3>
+            </div>
+            <div class="formula-image">
+                <img src="h6.png" alt="Graphique de /(h_6(t)/)">
+            </div>
+        </div>
+    <h3>Signal sonore initial \(x_6(t)\)</h3>
+    <audio controls>
+        <source src="piano.wav" type="audio/wav">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+    <h3>Signal sonore après convolution \(y_6(t)\)</h3>
+    <audio controls>
+        <source src="piano_filtre.wav" type="audio/wav">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+</div>
 </body>
 </html>>
